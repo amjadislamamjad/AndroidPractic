@@ -1,8 +1,8 @@
 package com.example.amjad.apca;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.widget.Toast;
 
@@ -17,16 +17,18 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(5000);
+                    Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                    startActivity(i);
                 } catch (Exception ex) {
-                    Toast toast=Toast.makeText(getApplicationContext(),ex.getMessage(),Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER_VERTICAL,0,0);
+                    Toast toast = Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
                     toast.show();
-                }
-                finally {
-                    Intent it=new Intent(SplashScreen.this,MainActivity.class);
+                } finally {
+                    Intent it = new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(it);
                 }
             }
-        };td.start();
+        };
+        td.start();
     }
 }
