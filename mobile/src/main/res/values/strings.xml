@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">APCA</string>
+    <string name="title_activity_database_demo">DatabaseActivityDemo</string>
 </resources>
